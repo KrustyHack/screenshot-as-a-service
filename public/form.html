@@ -1,94 +1,68 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Url2Image</title>
-  <meta name="description" content="Faites des captures d'écran de pages web" />
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-  <style type="text/css">
-  .container-fluid {
-    margin: 0 auto;
-    max-width: 940px;
-  }
-  </style>
-</head>
-<body>
-<div class="container-fluid">
-  <div class="page-header">
-    <h1>Url2Image</h1>
-  </div>
-  <div class="row-fluid">
-  <form action="../" method="GET" class="well form-inline">
-    <fieldset>
-      
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="url" class="span12" required="required" placeholder="Url"/>
-        <span class="help-block">avec ou sans http://</span>
+  <head>
+    <meta charset="utf-8">
+    <title>Url2Image</title>
+    <meta name="description" content="Faites des captures d'écran de pages web" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.blackcreeper.com/stylesheets/bootstrap.yeti.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Url2Image</h1>
       </div>
+      <form action="../" method="GET">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="text" name="url" class="form-control" required="required" placeholder="Url"/>
+              <span class="help-block">avec ou sans http://</span>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="width" class="form-control" style="display: initial" placeholder="Width"/>
+              <span class="help-block">en pixels</span>
+            </div>
+            <div class="form-group">
+              <input type="text" name="height" class="form-control" style="display: initial" placeholder="Height"/>
+              <span class="help-block">en pixels</span>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="clipRect" class="form-control" placeholder="clipRect (JSON)"/>
+              <span class="help-block">ex.: {"top":14,"left":3,"width":400,"height":300}</span>
+            </div>
+            
+            <div class="form-group checkbox">
+              <label for="javascriptEnabled">
+                <input type="checkbox" checked="checked" name="javascriptEnabled" value="true"/>Activer le javaScript
+              </label>
+              <label for="loadImages">
+                <input type="checkbox" checked="checked" name="loadImages" value="true"/>Charger les images
+              </label>
+              <label for="localToRemoteUrlAccessEnabled">
+                <input type="checkbox" name="localToRemoteUrlAccessEnabled" value="true"/>Activer accès local vers distant
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="userAgent" class="form-control" placeholder="User Agent"/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="userName" class="form-control" placeholder="Username"/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="password" class="form-control" placeholder="Password"/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="callback" class="form-control" placeholder="Callback Url"/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="delay" class="form-control" placeholder="Delay in miliseconds"/>
+            </div>
+            <button type="submit" class="btn btn-success col-md-12">Envoyer</button>
+          </div>
+        </div>
+      </form>
     </div>
-    
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="width" class="span3" style="display: initial" placeholder="Width"/>
-        <input type="text" name="height" class="span3" style="display: initial" placeholder="Height"/>
-        <span class="help-inline">en pixels</span>
-      </div>
-    </div>
-    
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="clipRect" class="span6" placeholder="clipRect (JSON)"/>
-        <span class="help-inline">ex.: {"top":14,"left":3,"width":400,"height":300}</span>
-      </div>
-    </div>
-    
-    <div class="control-group">
-      <div class="controls">
-        <label class="checkbox inline" for="javascriptEnabled">
-          <input type="checkbox" checked="checked" name="javascriptEnabled" value="true"/>Activer le javaScript
-        </label>
-        <label class="checkbox inline" for="loadImages">
-          <input type="checkbox" checked="checked" name="loadImages" value="true"/>Charger les images
-        </label>
-        <label class="checkbox inline" for="localToRemoteUrlAccessEnabled">
-          <input type="checkbox" name="localToRemoteUrlAccessEnabled" value="true"/>Activer accès local vers distant
-        </label>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="userAgent" class="span12" placeholder="User Agent"/>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="userName" class="span3" style="display: initial" placeholder="Username"/>
-        <input type="text" name="password" class="span3" style="display: initial" placeholder="Password"/>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="callback" class="span12" placeholder="Callback Url"/>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
-        <input type="text" name="delay" class="span2" style="display: initial" placeholder="Delay in miliseconds"/>
-      </div>
-    </div>
-
-    <div class="form-actions">
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-    </div>
-    
-    </fieldset>
-  </form>
-  </div>
-</div>
-</body>
+  </body>
 </html>
