@@ -1,0 +1,7 @@
+name: KrustyHack/url2image
+author:
+  name: KrustyHack
+  email: krustyhack@gmail.com
+  url: 'https://www.nicolashug.com'
+copyright: 2015 KrustyHack
+description: Website screenshot service powered by node.js and phantomjs
